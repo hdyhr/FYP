@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>View Report</title>
+
+    <style>
+        body {
+            background-image: url('images/background6.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        /*navbar start*/
+        .hello {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.623);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 120%;
+            padding: 18px 20px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        /*navbar end*/
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .search {
+            float: right;
+        }
+
+        .sort {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class = "hello">
+        <li><a class="active" href="home.html">Home</a></li>
+        <li><a href="generate.html">Generate</a></li>
+        <li><a href="#maintain">Maintain</a></li>
+        <li><a href="viewreport.html">View Reports</a></li>
+        <li><a href="viewcustomerreport.html">View Customer Reports</a></li>
+        <li style="float:right"><a href="login.html">Logout</a></li>
+    </ul>
+    <h2>View Reports</h2>
+
+    
+
+    <form class="sort">
+        <label for="report">Sort By: </label>
+        <select name="report" id="report">
+          <option value="chrono">New - Old</option>
+          <option value="chrono">Old - New</option>
+          <option value="alpha">A-Z</option>
+          <option value="alpha">Z-A</option>
+        </select>
+        <br><br>
+      </form>
+
+      <form class="search">
+        <input type="text" placeholder=" Search...." name="search">
+        <button type="submit">Search</button>
+        <br><br>
+    </form>
+
+    <table>
+        <tr>
+            <th>Report Name</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Report1</td>
+            <td> <a href="/prototype/SampleReport.pdf" download>
+                    <button type="button">Download</button>
+                </a></td>
+        </tr>
+        <tr>
+            <td>Report2</td>
+            <td> <a href="/prototype/SampleReport.pdf" download>
+                    <button type="button">Download</button>
+                </a></td>
+        </tr>
+        <tr>
+            <td>Report3</td>
+            <td> <a href="/prototype/SampleReport.pdf" download>
+                    <button type="button">Download</button>
+                </a></td>
+        </tr>
+        <tr>
+            <td>Report4</td>
+            <td> <a href="/prototype/SampleReport.pdf" download>
+                    <button type="button">Download</button>
+                </a></td>
+        </tr>
+
+    </table>
+
+
+</body>
+
+</html>

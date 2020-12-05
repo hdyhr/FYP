@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <style>
+        body {
+            background-image: url('images/background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 400%;
+            margin-top: 70px;
+        }
+
+        .container {
+            margin: auto;
+            width: 25%;
+            font-size: 120%;
+            margin-left: 520px;
+        }
+
+        .button {
+            display: inline; 
+            width: 100px;
+            height: 30px;
+            padding: 5px;
+            border-radius: 10px;
+
+        }
+
+        .font1 {
+            font-weight: bold;
+            font-style: italic;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+    <h1 style="color:rgb(255, 255, 255);">Report Generator</h1>
+    <div class="container">
+        <form action="emailsent.html">
+            <label class="font1" for="email">Enter Registered Email: </label>
+            <input type="text" id="email" name="email" size="50" required>
+            <br><br>
+
+            
+            <input class="button" type="submit" value="Back" onclick="window.location.href = 'login.html';">
+            <input class="button" type="submit" value="Enter">
+
+
+
+        </form>
+
+    </div>
+</body>
+
+</html>

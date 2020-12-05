@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+
+    <style>
+        body {
+            background-image: url('images/background6.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        /*navbar start*/
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.623);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size : 120%;
+            padding: 18px 20px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        /*navbar end*/
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+            padding: 20px;
+            padding-top: 150px;
+            text-align: center;
+            font-size: 150%;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="home.html">Home</a></li>
+        <li><a href="generate.html">Generate</a></li>
+        <li><a href="#maintain">Maintain</a></li>
+        <li><a href="viewreport.html">View Reports</a></li>
+        <li><a href="viewcustomerreport.html">View Customer Reports</a></li>
+        <li style="float:right"><a href="login.html">Logout</a></li>
+    </ul>
+
+
+    <div class="row">
+        <div class="column">
+            <a href="login.html">
+                <img src="images/generate1.png" alt="generate" style="width:80%">
+            </a>
+            <p>Generate Report</p>
+        </div>
+        <div class="column">
+            <img src="images/maintain1.png" alt="maintain" style="width:80%">
+            <p>Maintain Report</p>
+        </div>
+        <div class="column">
+            <a href="viewreport.html">
+            <img src="images/view1.png" alt="view reports" style="width:80%">
+        </a>
+            <p>View Report</p>
+        </div>
+        <div class="column">
+            <a href="viewreport.html">
+            <img src="images/view1.png" alt="view  customer reports" style="width:80%">
+        </a>
+            <p>View Customer Report</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
