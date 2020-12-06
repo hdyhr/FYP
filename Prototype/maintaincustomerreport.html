@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Maintain Customer Report</title>
+    
+        <style>
+            body {
+                background-image: url('images/background6.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+    
+            /*navbar start*/
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgba(0, 0, 0, 0.623);
+            }
+    
+            li {
+                float: left;
+            }
+    
+            li a {
+                display: block;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-size: 120%;
+                padding: 18px 20px;
+                text-decoration: none;
+            }
+    
+            li a:hover {
+                background-color: #111;
+            }
+    
+            /*navbar end*/
+    
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+    
+            td,
+            th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+    
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+    
+            .search {
+                float: right;
+            }
+    
+            .sort {
+                float: right;
+            }
+        </style>
+    </head>
+
+<body>
+
+    <ul class="hello">
+        <li><a class="active" href="home.html">Home</a></li>
+        <li><a href="generate.html">Generate</a></li>
+        <li><a href="maintain.html">Maintain</a></li>
+        <li><a href="viewreport.html">View Reports</a></li>
+        <li><a href="viewcustomerreport.html">View Customer Reports</a></li>
+        <li style="float:right"><a href="login.html">Logout</a></li>
+    </ul>
+    <h2>Maintain Customer Report</h2>
+
+
+    <table id="custTable">
+        <tr>
+            <th>Report Name</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>CReport1</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+        </tr>
+        <tr>
+            <td>CReport2</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+        </tr>
+        <tr>
+            <td>CReport3</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+        </tr>
+        <tr>
+            <td>CReport4</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+        </tr>
+
+    </table>
+
+    <script>
+        function deleteRow(r) {
+            var i = r.parentNode.parentNode.rowIndex;
+            document.getElementById("custTable").deleteRow(i);
+        }
+    </script>
+
+
+</body>
+
+</html>
