@@ -6,9 +6,9 @@
 - create a pull request
 
 #USING GITHUB 
-create a new branch from origin/master
-'branch-name' --> 'origin/master'
-do a git pull origin master before committing changes.
+create a new branch from origin/main
+'branch-name' --> 'origin/main'
+do a git pull origin main before committing changes.
 resolve conflict if any
 compare the codes to check if its the intended chages
 add commit comment --> stage file --> commit staged --> push
