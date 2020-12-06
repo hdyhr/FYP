@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+
+    <style>
+        body {
+            background-image: url('images/background6.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        /*navbar start*/
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.623);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 120%;
+            padding: 18px 20px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        /*navbar end*/
+
+        body {
+            text-align: justify;
+        }
+
+        .button {
+            border-radius: 4px;
+            background-color: #000000a8;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 10px;
+            float: right;
+            margin-right: 100px;
+    
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .font1 {
+            font-size: x-large;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+
+
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="generate.html">Generate</a></li>
+        <li><a href="#maintain">Maintain</a></li>
+        <li><a href="#viewreport">View Reports</a></li>
+        <li><a href="#viewcustomerreport">View Customer Reports</a></li>
+        <li style="float:right"><a href="login.html">Logout</a></li>
+    </ul>
+
+    
+
+    <br><br>
+
+    <button onclick="window.location.href='viewreport.html';" class="button" style="vertical-align:middle"><span>Generate </span></button>
+    
+    <form>
+        <label class="font1" for="myfile">Upload a CSV File:</label> <br>
+        <input type="file" id="myfile" name="myfile"><br><br>
+        <input type="Submit" value="Upload">
+    </form>
+
+    <table style="width:100%">
+
+        <h2 class="font1">Google Ads</h2>
+        <tr>
+            <th>Clicks</th>
+            <th>Impressions</th>
+            <th>Cost</th>
+
+        </tr>
+        <tr>
+            <td>
+
+                <input type="text" id="googleAdClick" name="googleAdClick" value="">
+            </td>
+            <td>
+
+                <input type="text" id="googleImp" name="googleImp" value="">
+            </td>
+            <td>
+
+                <input type="text" id="googleAdCost" name="googleAdCost" value=""> <br><br>
+            </td>
+
+        </tr>
+
+
+        <tr>
+            <td>
+                <h2 class="font1">Facebook Campaign</h2>
+            </td>
+        </tr>
+        <tr>
+            <th>Clicks</th>
+            <th>Link Clicks</th>
+            <th>Amount Spent</th>
+            <th>Impressions</th>
+        </tr>
+
+        <tr>
+
+            <td>
+
+
+                <input type="text" id="FbClick" name="FbClick" value="">
+            </td>
+            <td>
+
+                <input type="text" id="FbClickLink" name="FbClickLink" value="">
+            </td>
+            <td>
+
+                <input type="text" id="FbAmtSpent" name="FbAmtSpent" value="">
+            </td>
+            <td>
+
+                <input type="text" id="FbImp" name="FbImp" value="">
+            </td>
+        </tr>
+
+
+
+    </table>
+
+
+
+</body>
+
+</html>
