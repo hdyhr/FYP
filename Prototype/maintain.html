@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Maintain Report</title>
+
+    <style>
+        body {
+            background-image: url('images/background6.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        
+        /*navbar start*/
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.623);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 120%;
+            padding: 18px 20px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+        /* navbar end*/
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+            padding: 20px;
+            padding-top: 150px;
+            text-align: center;
+            font-size: 150%;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+    </style>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="generate.html">Generate</a></li>
+        <li><a href="#maintain">Maintain</a></li>
+        <li><a href="#viewreport">View Reports</a></li>
+        <li><a href="#viewcustomerreport">View Customer Reports</a></li>
+        <li style="float:right"><a href="login.html">Logout</a></li>
+    </ul>
+
+    <div class="row">
+        
+        <div class="column">
+            <img src="images/maintain1.png" alt="maintain" style="width:80%">
+            <p>Maintain Report</p>
+        </div>
+        <div class="column">
+            <img src="images/maintain1.png" alt="maintain" style="width:80%">
+            <p>Maintain Customer Report</p>
+        </div>
+        
+    </div>
+
+
+   
+</head>
+
+</html>
