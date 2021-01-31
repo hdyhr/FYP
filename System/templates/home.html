@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+
+    <style>
+        /*navbar start*/
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.623);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 120%;
+            padding: 18px 20px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        /*navbar end*/
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+            padding: 20px;
+            padding-top: 150px;
+            text-align: center;
+            font-size: 150%;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body style="background:url('/static/images/background6.jpg');">
+    <ul>
+        <li><a class="active" href="home">Home</a></li>
+        <li><a href="generate">Generate</a></li>
+        <li><a href="viewreport">View Reports</a></li>
+        <li><a href="viewcustomerreport">View Customer Reports</a></li>
+        <li style="float:right"><a href="logout">Logout</a></li>
+    </ul>
+
+
+    <div class="row">
+        <div class="column">
+            <a href="generate">
+                <img src="/static/images/generate1.png" alt="generate" style="width:80%">
+            </a>
+            <p>Generate Report</p>
+        </div>
+        <div class="column">
+            <a href="viewreport">
+                <img src="/static/images/view1.png" alt="view reports" style="width:80%">
+            </a>
+            <p>View Report</p>
+        </div>
+        <div class="column">
+            <a href="viewcustomerreport">
+                <img src="/static/images/view1.png" alt="view  customer reports" style="width:80%">
+            </a>
+            <p>View Customer Report</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

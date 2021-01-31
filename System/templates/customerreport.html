@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Customer Reports</title>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .search {
+            float: right;
+        }
+
+        .sort {
+            float: right;
+        }
+    </style>
+</head>
+
+<body style="background:url('/static/images/background6.jpg');">
+
+    <h2>Customer Reports</h2>
+
+    <table>
+        <tr>
+            <th>Reports Generated</th>
+        </tr>
+        {% for report in customer_reportList -%}
+        <tr>
+            <td><a href="http://127.0.0.1:5500/{{ report }}">{{ report }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+</body>
+
+</html>

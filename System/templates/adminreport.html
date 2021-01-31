@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{{ hotel_name }}</title>
+</head>
+
+<body>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .table99 {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .avgrating{
+            text-align: center;
+        }
+        
+        .pc {
+            text-align: center;
+        }
+
+        .conclusion{
+            text-align: center;
+        }
+
+        .end {
+            text-align: center;
+        }
+
+        .calc {
+            text-align: center;
+        }
+
+        .header_left{
+            text-align: left;
+        }
+    </style>
+
+    <h1>{{ hotel_name }}</h1>
+    <div>
+        <p><b>Hotel Name:</b> {{hotel_name}} </p>
+        <p class="searchEngine"><b>Search Engines: <a href="http://www.agoda.com/en-sg/">www.agoda.com/en-sg/</a>, <a
+                    href="http://www.booking.com">www.booking.com</a></b>
+        </p>
+        <p><b>Hotel Location: </b>{{ hotel_location }} </p>
+    </div>
+    <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    <h1 class="header_left"><u>Based on the reviews from agoda.com</u></h1>
+    <h2><b>Total Bookings for the year:</b> {{ reviews_count }}</h2>
+
+    <h3><u>Breakdown of bookings by month</u></h3>
+    <table style="width:80%">
+        <tr>
+            <th>Month</th>
+            <th>No. of Bookings</th>
+        </tr>
+        <tr>
+            <td><b>January</b></td>
+            <td> {{ Jan_Bookings }}</td>
+        </tr>
+        <tr>
+            <td><b>February</b></td>
+            <td> {{ Feb_Bookings }}</td>
+        </tr>
+        <tr>
+            <td><b>March</b></td>
+            <td> {{ Mar_Bookings }}</td>
+        </tr>
+        <tr>
+            <td><b>April</b></td>
+            <td> {{ Apr_Bookings }}</td>
+        </tr>
+        <tr>
+            <td><b>May</b></td>
+            <td> {{ May_Bookings }}</td>
+        </tr>
+        <tr>
+            <td><b>June</b></td>
+            <td> {{ Jun_Bookings }}</td>
+        </tr>
+        <tr>
+            <td><b>July</b></td>
+            <td> {{ Jul_Bookings }}</td>
+        </tr>
+        <tr>
+            <td><b>August</b></td>
+            <td> {{ Aug_Bookings }}</td>
+        </tr>
+        <tr>
+            <td><b>September</b></td>
+            <td> {{ Sep_Bookings }}</td>
+        </tr>
+        <tr>
+            <td><b>October</b></td>
+            <td> {{ Oct_Bookings }}</td>
+        </tr>
+        <tr>
+            <td><b>November</b></td>
+            <td> {{ Nov_Bookings }}</td>
+        </tr>
+        <tr>
+            <td><b>December</b></td>
+            <td> {{ Dec_Bookings }}</td>
+        </tr>
+
+    </table>
+
+
+    <h3><u>Top 3 Room Types</u></h3>
+    <div>
+        {{ Agoda_Room_Types }}
+    </div>
+
+    <h3><u>Breakdown of bookings by Number Of Nights</u></h3>
+    <table style="width:80%">
+        <tr>
+            <th>Nights</th>
+            <th>No. of Bookings</th>
+        </tr>
+        <tr>
+            <td><b>1 Night</b></td>
+            <td> {{ one_night }}</td>
+        </tr>
+        <tr>
+            <td><b>2 Nights</b></td>
+            <td> {{ two_night }}</td>
+        </tr>
+        <tr>
+            <td><b>3 Nights</b></td>
+            <td> {{ three_night }}</td>
+        </tr>
+        <tr>
+            <td><b>4 Nights</b></td>
+            <td> {{ four_night }}</td>
+        </tr>
+        <tr>
+            <td><b>5 Nights</b></td>
+            <td> {{ five_night }}</td>
+        </tr>
+        <tr>
+            <td><b>6 Nights</b></td>
+            <td> {{ six_night }}</td>
+        </tr>
+        <tr>
+            <td><b>7 Nights</b></td>
+            <td> {{ seven_night }}</td>
+        </tr>
+        <tr>
+            <td><b>8 Nights</b></td>
+            <td> {{ eight_night }}</td>
+        </tr>
+        <tr>
+            <td><b>9 Nights</b></td>
+            <td> {{ nine_night }}</td>
+        </tr>
+
+    </table>
+    <br>
+    <h3><u>All Group Types</u></h3>
+    <div>
+        {{ Agoda_Group_Types }}
+    </div>
+
+    <h3><u>Categories of Ratings and its frequency</u></h3>
+    <table style="width:80%">
+        <tr>
+            <th>Rating Category</th>
+            <th>Frequency</th>
+        </tr>
+        <tr>
+            <td><b>Exceptional ( 9+ )</b></td>
+            <td> {{ exceptional }}</td>
+        </tr>
+        <tr>
+            <td><b>Excellent( 8 - 9 )</b></td>
+            <td> {{ excellent }}</td>
+        </tr>
+        <tr>
+            <td><b>Very Good ( 7 - 8 )</b></td>
+            <td> {{ very_good }}</td>
+        </tr>
+        <tr>
+            <td><b>Good ( 6 - 7 )</b></td>
+            <td> {{ good }}</td>
+        </tr>
+        <tr>
+            <td><b>Below Expectation (below 6)</b> </td>
+            <td> {{ below_expectation }}</td>
+        </tr>
+
+    </table>
+
+    <h3><u>Top 3 Popular Countries</u></h3>
+    <div>
+        {{ a_country }}
+    </div>
+    <br> 
+    <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>    
+    <h1 class="header_left"><u>Based on the reviews from booking.com</u></h1>
+    <h2><b>Total Bookings for the year:</b> {{ b_reviews }}</h2>
+    <h3><u>Breakdown of bookings by month</u></h3>
+    <table style="width:80%">
+        <tr>
+            <th><b>Month</b></th>
+            <th>No. of Bookings</th>
+        </tr>
+        <tr>
+            <td><b>January</b></td>
+            <td> {{ b_jan }}</td>
+        </tr>
+        <tr>
+            <td><b>February</b></td>
+            <td> {{ b_feb }}</td>
+        </tr>
+        <tr>
+            <td><b>March</b></td>
+            <td> {{ b_mar }}</td>
+        </tr>
+        <tr>
+            <td><b>April</b></td>
+            <td> {{ b_apr }}</td>
+        </tr>
+        <tr>
+            <td><b>May</b></td>
+            <td> {{ b_may }}</td>
+        </tr>
+        <tr>
+            <td><b>June</b></td>
+            <td> {{ b_jun }}</td>
+        </tr>
+        <tr>
+            <td><b>July</b></td>
+            <td> {{ b_jul }}</td>
+        </tr>
+        <tr>
+            <td><b>August</b></td>
+            <td> {{ b_aug }}</td>
+        </tr>
+        <tr>
+            <td><b>September</b></td>
+            <td> {{ b_sep }}</td>
+        </tr>
+        <tr>
+            <td><b>October</b></td>
+            <td> {{ b_oct }}</td>
+        </tr>
+        <tr>
+            <td><b>November</b></td>
+            <td> {{ b_nov }}</td>
+        </tr>
+        <tr>
+            <td><b>December</b></td>
+            <td> {{ b_dec }}</td>
+        </tr>
+
+    </table>
+
+    <h3><u>Top 3 Popular Room Types</u></h3>
+    <div>
+        {{ b_room_types }}
+    </div>
+
+    <h3><u>Breakdown of bookings by Number Of Nights</u></h3>
+    <table style="width:80%">
+        <tr>
+            <th><b>Nights</b></th>
+            <th>No. of Bookings</th>
+        </tr>
+        <tr>
+            <td><b>1 Night</b></td>
+            <td> {{ b_one_night }}</td>
+        </tr>
+        <tr>
+            <td><b>2 Nights</b></td>
+            <td> {{ b_two_night }}</td>
+        </tr>
+        <tr>
+            <td><b>3 Nights</b></td>
+            <td> {{ b_three_night }}</td>
+        </tr>
+        <tr>
+            <td><b>4 Nights</b></td>
+            <td> {{ b_four_night }}</td>
+        </tr>
+        <tr>
+            <td><b>5 Nights</b></td>
+            <td> {{ b_five_night }}</td>
+        </tr>
+        <tr>
+            <td><b>6 Nights</b></td>
+            <td> {{ b_six_night }}</td>
+        </tr>
+        <tr>
+            <td><b>7 Nights</b></td>
+            <td> {{ b_seven_night }}</td>
+        </tr>
+        <tr>
+            <td><b>8 Nights</b></td>
+            <td> {{ b_eight_night }}</td>
+        </tr>
+        <tr>
+            <td><b>9 Nights</b></td>
+            <td> {{ b_nine_night }}</td>
+        </tr>
+
+    </table>
+    <br>
+    <h3><u>All Group Types</u></h3>
+    <div>
+        {{ b_group }}
+    </div>
+
+    <h3><u>Categories of Ratings and its frequency</u></h3>
+    <table style="width:80%">
+        <tr>
+            <th><b>Rating Category</b></th>
+            <th>Frequency</th>
+        </tr>
+        <tr>
+            <td><b>Exceptional ( 9+ )</b></td>
+            <td> {{ b_exceptional }}</td>
+        </tr>
+        <tr>
+            <td><b>Excellent( 8 - 9 )</b></td>
+            <td> {{ b_excellent }}</td>
+        </tr>
+        <tr>
+            <td><b>Very Good ( 7 - 8 )</b></td>
+            <td> {{ b_very_good }}</td>
+        </tr>
+        <tr>
+            <td><b>Good ( 6 - 7 )</b></td>
+            <td> {{ b_good }}</td>
+        </tr>
+        <tr>
+            <td><b>Below Expectation (below 6) </b></td>
+            <td> {{ b_below }}</td>
+        </tr>
+
+    </table>
+
+    <h3><u>Top 3 Popular Countries</u></h3>
+    <div>
+        {{ b_country }}
+    </div>
+    <br>
+    <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    <h1 class="calc"><u>Google Ads</u></h1>
+    <div class="calc">
+        <p><b>Clicks: </b>{{ google_clicks }}</p>
+        <p><b>Impressions: </b>{{ google_impression }}</p>
+        <p><b>Cost: </b>${{ google_cost }}</p>
+        <p><b>Click Through Rate: </b>{{ click_through_rate }}%</p>
+        <p><b>Cost Per Click: </b>${{ cost_per_click }}</p>
+
+    </div>
+
+    <h1 class="calc"><u>Facebook Campaign</u></h1>
+    <div class="calc">
+        <p><b>Clicks: </b>{{ fb_clicks }}</p>
+        <p><b>Link Clicks: </b>{{ fb_linkclick }}</p>
+        <p><b>Cost: </b>${{ fb_amt }}</p>
+        <p><b>Impressions: </b>{{ fb_impression }}</p>
+        <p><b>Cost Per 1000 clicks: </b>${{ cpm }}</p>
+        <p><b>Click Through Rate clicks: </b>{{ ctr }}%</p>
+        <p><b>Cost Per Click: </b>${{ cpc }}</p>
+        <p><b>Link Click Through Rate: </b>{{ cpm }}%</p>
+        <p><b>Cost Per Link Click: </b>${{ cplc }}</p>
+    </div>
+    <br>
+    <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    <h1><u><b>Hotel Ratings Breakdown Based On Agoda.com</b></u></h1>
+    <br>
+    <h3 class="avgrating"><u>Hotel Rating of " {{hotel_name}} " based on the 6 categories</u></h3>
+    <table class="table99" style="width:80%">
+        <tr>
+            <th><b>Category</b></th>
+            <th><b>Rating</b></th>
+        </tr>
+        <tr>
+            <td><b>Cleanliness</b></td>
+            <td> {{ agoda_cleanliness1 }}</td>
+        </tr>
+        <tr>
+            <td><b>Facilities</b></td>
+            <td> {{ agoda_facilities1 }}</td>
+        </tr>
+        <tr>
+            <td><b>Location</b></td>
+            <td> {{ agoda_location1 }}</td>
+        </tr>
+        <tr>
+            <td><b>Room Comfort</b></td>
+            <td> {{ agoda_room_comfort1 }}</td>
+        </tr>
+        <tr>
+            <td><b>Service</b></td>
+            <td> {{ agoda_service1 }}</td>
+        </tr>
+        <tr>
+            <td><b>Value for money</b></td>
+            <td> {{ agoda_value1 }}</td>
+        </tr>
+
+    </table>
+    <h2 class="avgrating"><b>The average rating of "{{hotel_name}}" is {{agoda_average_rating1}}/10.</b></h2>
+    <br>
+    <h3 class="avgrating"><u>Hotel Rating of " {{recommended_hotel_name}} " based on the 6 categories</u></h3>
+    <table class="table99" style="width:80%">
+        <tr>
+            <th><b>Category</b></th>
+            <th><b>Rating</b></th>
+        </tr>
+        <tr>
+            <td><b>Cleanliness</b></td>
+            <td> {{ agoda_cleanliness2 }}</td>
+        </tr>
+        <tr>
+            <td><b>Facilities</b></td>
+            <td> {{ agoda_facilities2 }}</td>
+        </tr>
+        <tr>
+            <td><b>Location</b></td>
+            <td> {{ agoda_location2 }}</td>
+        </tr>
+        <tr>
+            <td><b>Room Comfort</b></td>
+            <td> {{ agoda_room_comfort2 }}</td>
+        </tr>
+        <tr>
+            <td><b>Service</b></td>
+            <td> {{ agoda_service2 }}</td>
+        </tr>
+        <tr>
+            <td><b>Value for money</b></td>
+            <td> {{ agoda_value2 }}</td>
+        </tr>
+    </table>
+    <h2 class="avgrating"><b>The average rating of "{{recommended_hotel_name}}" is {{agoda_average_rating2}}/10.</b></h2>
+    <br>
+    <h1><u><b>PROS and CONS of <br>{{hotel_name}} VS {{recommended_hotel_name}}</b></u></h1>
+    <div class="pc">
+        <p>1. The cleanliness of {{hotel_name}} is <b>{{p1}}</b> as compared to {{recommended_hotel_name}}.</p>
+        <p>2. The facilities of {{hotel_name}} is <b>{{p2}}</b> as compared to {{recommended_hotel_name}}.</p>
+        <p>3. The location of {{hotel_name}} is <b>{{p3}}</b> as compared to {{recommended_hotel_name}}.</p>
+        <p>4. The room comfort of {{hotel_name}} is <b>{{p4}}</b> as compared to {{recommended_hotel_name}}.</p>
+        <p>5. The service of {{hotel_name}} is <b>{{p5}}</b> as compared to {{recommended_hotel_name}}.</p>
+        <p>6. The value for money of {{hotel_name}} is <b>{{p6}}</b> as compared to {{recommended_hotel_name}}.</p>
+    </div>
+    <br>
+    <h1><u><b>Hotel Ratings of {{hotel_name}} from <br> www.agoda.com VS www.booking.com</b></u></h1>
+    <table class="table99" style="width:80%">
+        <tr>
+            <th><b>Category</b></th>
+            <th><b>agoda.com</b></th>
+            <th><b>booking.com</b></th>
+        </tr>
+        <tr>
+            <td><b>Cleanliness</b></td>
+            <td>{{agoda_cleanliness1}}</td>
+            <td>{{booking_cleanliness1}}</td>
+        </tr>
+        <tr>
+            <td><b>Facilities</b></td>
+            <td>{{agoda_facilities1}}</td>
+            <td>{{booking_facilities1}}</td>
+        </tr>
+        <tr>
+            <td><b>Location</b></td>
+            <td>{{agoda_location1}}</td>
+            <td>{{booking_location1}}</td>
+        </tr>
+        <tr>
+            <td><b>Room Comfort</b></td>
+            <td>{{agoda_room_comfort1}}</td>
+            <td>{{booking_room_comfort1}}</td>
+        </tr>
+        <tr>
+            <td><b>Service</b></td>
+            <td>{{agoda_service1}}</td>
+            <td>{{booking_service1}}</td>
+        </tr>
+        <tr>
+            <td><b>Value For Money</b></td>
+            <td>{{agoda_value1}}</td>
+            <td>{{booking_value1}}</td>
+        </tr>
+        <tr>
+            <td><b>*Average Rating*</b></td>
+            <td>{{agoda_average_rating1}}</td>
+            <td>{{booking_average_rating1}}</td>
+        </tr>
+    </table>
+    <br>
+    <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    <h1><u><b>Conclusion</b></u></h1>
+    <div class="conclusion">
+        <p>1. The most popular room type of {{hotel_name}} is <b>{{agoda_best_room}} from agoda.com </b> and <b>{{booking_best_room}} from booking.com</b>.</p>
+        <p>2. The most popular room night of {{hotel_name}} is <b>{{agoda_best_night}} from agoda.com </b> and <b>{{booking_best_night}} from booking.com</b>.</p>
+        <p>3. The most popular group of customers booking {{hotel_name}} is <b>{{agoda_best_group}} from agoda.com </b> and <b>{{booking_best_group}} from booking.com</b>.</p>
+        <p>4. By comparing www.agoda.com/en-sg/ and www.booking.com/ data, we can see that more people use <b>{{best_website}}</b> to book {{hotel_name}}.</p>
+        <p>5. Based on www.agoda.com/en-sg/, {{hotel_name}} has the most bookings in <b>{{agoda_best_month}}</b>.</p>
+        <p>6. Based on www.booking.com/, {{hotel_name}} has the most bookings in <b>{{booking_best_month}}</b>.</p>
+        <p>7. Based on www.agoda.com/en-sg/, most of the customers come from <b>{{agoda_best_country}}</b>.</p>
+        <p>8. Based on www.booking.com/, most of the customers come from <b>{{booking_best_country}}</b>.</p>
+    </div>
+    <br>
+    <h3 class="end">--END--</h3>
+</body>
+
+</html>
