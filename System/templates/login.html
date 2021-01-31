@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background:url('/static/images/background.jpg');">
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 400%;
+            margin-top: 70px;
+        }
+
+        .container {
+            margin: auto;
+            width: 25%;
+            font-size: 120%;
+        }
+
+        .button {
+            border-radius: 12px;
+            color: rgb(0, 0, 0);
+            margin-left: 270px;
+            width: 100px;
+            
+        }
+
+        .font1 {
+            font-weight: bold;
+            font-style: italic;
+            color: rgb(255, 255, 255);
+        }
+
+        .font2 {
+            font-style: italic;
+            color: rgb(0, 0, 0);
+            
+            
+        }
+    </style>
+    <h1 style="color:rgb(255, 255, 255);">Report Generator</h1>
+    <div class="container">
+        <form action="{{ url_for('admin') }}" method="POST">
+            <label class="font1" for="usrname">Username</label>
+            <input type="text" id="usrname" name="usrname" size="50" required>
+            <br><br>
+            <label class="font1" for="psw">Password</label>
+            <input type="password" id="psw" name="psw" size="50" required>
+            <p class="msg">{{ msg }}</p>
+            <br><br>
+            <a class="font2" href="forgetpw">Forget Password? Click here</a>
+            <input class="button" type="submit" value="Login">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Default</title>
+
+    <style>
+        body {
+            background-image: url('System/templates/images/background6.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: right;
+            width: 25%;
+            padding: 10px;
+            padding-top: 150px;
+            text-align: center;
+            font-size: 150%;
+            margin-right: 250px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+
+    <body style="background:url('/static/images/background6.jpg');">
+        <div class="row">
+
+            <div class="column">
+                <a href="customer">
+                    <img src="/static/images/customer.png" alt="default" style="width:80%">
+                </a>
+                <p>Customer</p>
+            </div>
+            <div class="column">
+                <a href="admin">
+                    <img src="/static/images/admin.png" alt="default" style="width:80%">
+                </a>
+                <p>Admin</p>
+            </div>
+
+        </div>
+    </body>
+
+
+
+
+
+</head>
+
+</html>

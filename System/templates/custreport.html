@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{{ hotel_name }}</title>
+</head>
+
+<body>
+    <style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    th, td {
+        padding: 5px;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .table99 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .end {
+        text-align: center;
+    }
+
+    .avgrating{
+        text-align: center;
+    }
+        
+    .pc {
+        text-align: center;
+    }
+        
+    </style>
+
+    <h1>{{ hotel_name }}</h1>
+    <div>
+        <p><b>Hotel Name:</b> {{hotel_name}} </p>
+        <p class="searchEngine"><b>Search Engines: <a href="http://www.agoda.com/en-sg/">www.agoda.com/en-sg/</a></b></p>
+        <p><b>Hotel Location: </b>{{ hotel_location }} </p>
+    </div>
+    <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    
+    <h1><u><b>Hotel Ratings Breakdown Based On Agoda.com</b></u></h1>
+    <br>
+    <h3 class="avgrating"><u>Hotel Rating of " {{hotel_name}} " based on the 6 categories</u></h3>
+    <table class="table99" style="width:80%">
+        <tr>
+            <th><b>Category</b></th>
+            <th><b>Rating</b></th>
+        </tr>
+        <tr>
+            <td><b>Cleanliness</b></td>
+            <td> {{ agoda_cleanliness1 }}</td>
+        </tr>
+        <tr>
+            <td><b>Facilities</b></td>
+            <td> {{ agoda_facilities1 }}</td>
+        </tr>
+        <tr>
+            <td><b>Location</b></td>
+            <td> {{ agoda_location1 }}</td>
+        </tr>
+        <tr>
+            <td><b>Room Comfort</b></td>
+            <td> {{ agoda_room_comfort1 }}</td>
+        </tr>
+        <tr>
+            <td><b>Service</b></td>
+            <td> {{ agoda_service1 }}</td>
+        </tr>
+        <tr>
+            <td><b>Value for money</b></td>
+            <td> {{ agoda_value1 }}</td>
+        </tr>
+
+    </table>
+    <h2 class="avgrating"><b>The average rating of "{{hotel_name}}" is {{agoda_average_rating1}}/10.</b></h2>
+    <br>
+    <h3 class="avgrating"><u>Hotel Rating of " {{recommended_hotel_name}} " based on the 6 categories</u></h3>
+    <table class="table99" style="width:80%">
+        <tr>
+            <th><b>Category</b></th>
+            <th><b>Rating</b></th>
+        </tr>
+        <tr>
+            <td><b>Cleanliness</b></td>
+            <td> {{ agoda_cleanliness2 }}</td>
+        </tr>
+        <tr>
+            <td><b>Facilities</b></td>
+            <td> {{ agoda_facilities2 }}</td>
+        </tr>
+        <tr>
+            <td><b>Location</b></td>
+            <td> {{ agoda_location2 }}</td>
+        </tr>
+        <tr>
+            <td><b>Room Comfort</b></td>
+            <td> {{ agoda_room_comfort2 }}</td>
+        </tr>
+        <tr>
+            <td><b>Service</b></td>
+            <td> {{ agoda_service2 }}</td>
+        </tr>
+        <tr>
+            <td><b>Value for money</b></td>
+            <td> {{ agoda_value2 }}</td>
+        </tr>
+    </table>
+    <h2 class="avgrating"><b>The average rating of "{{recommended_hotel_name}}" is {{agoda_average_rating2}}/10.</b></h2>
+    <br>
+    <h1><u><b>PROS and CONS of <br>{{hotel_name}} VS {{recommended_hotel_name}}</b></u></h1>
+    <div class="pc">
+        <p>1. The cleanliness of {{hotel_name}} is <b>{{p1}}</b> as compared to {{recommended_hotel_name}}.</p>
+        <p>2. The facilities of {{hotel_name}} is <b>{{p2}}</b> as compared to {{recommended_hotel_name}}.</p>
+        <p>3. The location of {{hotel_name}} is <b>{{p3}}</b> as compared to {{recommended_hotel_name}}.</p>
+        <p>4. The room comfort of {{hotel_name}} is <b>{{p4}}</b> as compared to {{recommended_hotel_name}}.</p>
+        <p>5. The service of {{hotel_name}} is <b>{{p5}}</b> as compared to {{recommended_hotel_name}}.</p>
+        <p>6. The value for money of {{hotel_name}} is <b>{{p6}}</b> as compared to {{recommended_hotel_name}}.</p>
+    </div>
+    <br>
+    <h3 class="end">--END--</h3>
+</body>
+</html>

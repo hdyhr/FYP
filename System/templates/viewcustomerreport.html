@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>View Customer Reports</title>
+
+    <style>
+        /*navbar start*/
+        .hello {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.623);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 120%;
+            padding: 18px 20px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        /*navbar end*/
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .search {
+            float: right;
+        }
+
+        .sort {
+            float: right;
+        }
+    </style>
+</head>
+
+<body style="background:url('/static/images/background6.jpg');">
+
+    <ul class = "hello">
+        <li><a class="active" href="home">Home</a></li>
+        <li><a href="generate">Generate</a></li>
+        <li><a href="viewreport">View Reports</a></li>
+        <li><a href="viewcustomerreport">View Customer Reports</a></li>
+        <li style="float:right"><a href="logout">Logout</a></li>
+    </ul>
+    <h2>View Customer Reports</h2>
+
+    <table>
+        <tr>
+            <th>Reports Generated</th>
+        </tr>
+        {% for report in customer_reportList -%}
+        <tr>
+            <td><a href="http://127.0.0.1:5500/{{ report }}">{{ report }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+</body>
+
+</html>
